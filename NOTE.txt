@@ -1,0 +1,62 @@
+composer create-project --prefer-dist laravel/lumen lumen-app
+
+cd lumen-app
+
+php -S localhost:8000 -t public
+
+
+
+docker -v
+
+
+Kiem tra cac contanner dang hoat dong
+docker images
+docker ps
+
+docker build -t docker-php-helloworld .` 
+
+docker-compose up --build
+
+
+docker-compose down
+docker-compose up -d
+
+docker rm -f <container_id>
+
+
+
+---------------
+docker pull mysql/mysql-server:latest
+
+Stop all running containers: docker stop $(docker ps -a -q)
+Delete all stopped containers: docker rm $(docker ps -a -q)
+
+
+docker rm -vf $(docker ps -aq);
+docker rmi -f $(docker images -aq);
+docker volume rm $(docker volume ls -q)
+
+
+docker build -t <images_name> ./
+docker run -p 80:80 <images_name>
+
+docker-compose up --build
+
+docker-compose restart 
+
+docker-compose --env-file .env up --build
+
+
+
+
+docker ps;docker images;
+
+
+Stop the container(s) using the following command:
+    docker-compose down
+Delete all containers using the following command:
+    docker rm -f $(docker ps -a -q)
+Delete all volumes using the following command:
+    docker volume rm $(docker volume ls -q)
+Restart the containers using the following command:
+    docker-compose up -d
