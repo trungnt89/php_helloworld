@@ -37,8 +37,8 @@ docker rmi -f $(docker images -aq);
 docker volume rm $(docker volume ls -q)
 
 
-docker build -t <images_name> ./
-docker run -p 80:80 <images_name>
+docker build -t <images_name_01> ./
+docker run -p 8001:80 <images_name_01>
 
 docker-compose up --build
 
